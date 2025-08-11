@@ -6,7 +6,7 @@ public class Multiplo
 {
     public static void main(String[] args)
     {
-        for (int i = 42; i <= 150; i++)
+        for (int i = 42; i <= 150; i++) 
         {
             if (i % 4 == 0)
             {
