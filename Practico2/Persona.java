@@ -17,10 +17,10 @@ public class Persona
      */
     Persona(int p_dni, String p_nombre, String p_apellido, int p_anio)
     {
-        this.nroDNI = p_dni;
-        this.nombre = p_nombre;
-        this.apellido = p_apellido;
-        this.anioNacimiento = p_anio;
+        setDNI(p_dni);
+        setNombre(p_nombre);
+        setApellido(p_apellido);
+        setAnioNacimiento(p_anio);
     }
 
     /**
