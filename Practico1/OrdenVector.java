@@ -17,7 +17,6 @@ public class OrdenVector {
             elementos[i] = sc.nextDouble();
             if (elementos[i] < menor) { // condicion para determinar el menor elemento
                 menor = elementos[i];
-
             }
 
         }

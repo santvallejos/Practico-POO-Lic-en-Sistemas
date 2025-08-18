@@ -13,7 +13,9 @@ public class OperarVector {
         int suma = 0;
         int mayor = 0;
         double promedio = 0.0;
+
         System.out.println("ingrese las notas de los alumnos"); // ingreso de las notas
+
         for (int i = 0; i < 5; i++) // bucle para el ingreso de las notas
         {
             System.out.print("Nota " + (i + 1) + ": "); // utilizamos (i+1) para que empieze las notas desde 1 y no
@@ -24,14 +26,17 @@ public class OperarVector {
                 mayor = notas[i];
             }
         }
+
         promedio = (double) suma / notas.length; // calculamos el promedio, y casteamos la asignacion de valor suma para
                                                  // que sea de un valor double
+
         System.out.println("Las notas ingresadas son: "); // mensaje de las notas ingresadas
+
         for (int i = 0; i < notas.length; i++) {
             System.out.println(notas[i] + "\t"); // mostramos las notas ingresadas, separadas por un tabulador
         }
+        
         System.out.println("Promedio: " + promedio); // mostramos el promedio de notas
         System.out.println("Mayor nota: " + mayor); // mostramos la mayor nota
-
     }
 }
