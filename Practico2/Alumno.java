@@ -22,7 +22,7 @@ public class Alumno
         setNota2(0);
     }
 
-    public void setLu(int p_lu)
+    private void setLu(int p_lu)
     {
         this.lu = p_lu;
     }
@@ -32,7 +32,7 @@ public class Alumno
         return this.lu;
     }
 
-    public void setNombre(String p_nombre)
+    private void setNombre(String p_nombre)
     {
         this.nombre = p_nombre;
     }
@@ -42,7 +42,7 @@ public class Alumno
         return this.nombre;
     }
 
-    public void setApellido(String p_apellido)
+    private void setApellido(String p_apellido)
     {
         this.apellido = p_apellido;
     }

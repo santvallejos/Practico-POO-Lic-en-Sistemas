@@ -34,7 +34,7 @@ public class Cliente
      * 
      * @param p_dni the new DNI number
      */
-    public void setNroDNI(int p_dni)
+    private void setNroDNI(int p_dni)
     {
         this.nroDNI = p_dni;
     }
@@ -49,7 +49,7 @@ public class Cliente
      * 
      * @param p_apellido the new last name
      */
-    public void setApellido(String p_apellido)
+    private void setApellido(String p_apellido)
     {
         this.apellido = p_apellido;
     }
@@ -64,7 +64,7 @@ public class Cliente
      * 
      * @param p_nombre the new first name
      */
-    public void setNombre(String p_nombre)
+    private void setNombre(String p_nombre)
     {
         this.nombre = p_nombre;
     }
@@ -79,7 +79,7 @@ public class Cliente
      * 
      * @param p_saldo the new balance
      */
-    public void setSaldo(double p_saldo)
+    private void setSaldo(double p_saldo)
     {
         this.saldo = p_saldo;
     }
