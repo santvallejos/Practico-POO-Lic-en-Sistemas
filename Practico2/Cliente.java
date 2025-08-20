@@ -1,18 +1,14 @@
 
 /**
- *  En la clase Cliente, el método 
- *  agregaSaldo(p_importe)  agrega  p_importe  al 
- *  saldo actual (lo actualiza) y devuelve el nuevo 
- *  saldo. El método nuevoSaldo(p_importe) 
- *  reemplaza  el  saldo  actual  por  p_importe  y 
- *  devuelve el nuevo saldo. La salida impresa del 
- *  método  mostrar()  debe  ser  la  siguiente:  (los 
- *  valores en negrita dependen del estado del 
- *  objeto) 
- *
- *  - Cliente - 
- *  Nombre y Apellido: Juan Perez (24444333) 
- *  Saldo: $200.00
+ * Clase que representa un cliente bancario con sus datos personales y saldo.
+ * Permite gestionar la información de un cliente incluyendo su DNI, nombre, apellido y saldo.
+ * 
+ * La clase proporciona métodos para:
+ * - Agregar saldo al balance actual
+ * - Reemplazar el saldo actual por un nuevo valor
+ * - Mostrar la información completa del cliente
+ * 
+ * @author Sistema de Gestión Bancaria
  */
 public class Cliente
 {
@@ -21,6 +17,15 @@ public class Cliente
     private String nombre;
     private double saldo;
 
+    /**
+     * Constructor de la clase Cliente.
+     * Inicializa un cliente con su DNI, apellido, nombre y saldo inicial.
+     * 
+     * @param p_dni Número de DNI del cliente
+     * @param p_apellido Apellido del cliente
+     * @param p_nombre Nombre del cliente
+     * @param p_saldo Saldo inicial del cliente
+     */
     Cliente(int p_dni, String p_apellido, String p_nombre, double p_saldo)
     {
         setNroDNI(p_dni);
@@ -29,71 +34,91 @@ public class Cliente
         setSaldo(p_saldo);
     }
 
-    /* 
-     * setNroDNI updates the DNI number
+    /**
+     * Establece el número de DNI del cliente.
      * 
-     * @param p_dni the new DNI number
+     * @param p_dni Número de DNI a asignar
      */
     private void setNroDNI(int p_dni)
     {
         this.nroDNI = p_dni;
     }
 
+    /**
+     * Obtiene el número de DNI del cliente.
+     * 
+     * @return Número de DNI del cliente
+     */
     public int getNroDNI()
     {
         return this.nroDNI;
     }
 
-    /* 
-     * setApellido updates the last name
+    /**
+     * Establece el apellido del cliente.
      * 
-     * @param p_apellido the new last name
+     * @param p_apellido Apellido a asignar al cliente
      */
     private void setApellido(String p_apellido)
     {
         this.apellido = p_apellido;
     }
 
+    /**
+     * Obtiene el apellido del cliente.
+     * 
+     * @return Apellido del cliente
+     */
     public String getApellido()
     {
         return this.apellido;
     }
 
-    /* 
-     * setNombre updates the first name
+    /**
+     * Establece el nombre del cliente.
      * 
-     * @param p_nombre the new first name
+     * @param p_nombre Nombre a asignar al cliente
      */
     private void setNombre(String p_nombre)
     {
         this.nombre = p_nombre;
     }
 
+    /**
+     * Obtiene el nombre del cliente.
+     * 
+     * @return Nombre del cliente
+     */
     public String getNombre()
     {
         return this.nombre;
     }
 
-    /* 
-     * setSaldo updates the balance
+    /**
+     * Establece el saldo del cliente.
      * 
-     * @param p_saldo the new balance
+     * @param p_saldo Saldo a asignar al cliente
      */
     private void setSaldo(double p_saldo)
     {
         this.saldo = p_saldo;
     }
 
+    /**
+     * Obtiene el saldo actual del cliente.
+     * 
+     * @return Saldo actual del cliente
+     */
     public double getSaldo()
     {
         return this.saldo;
     }
 
-    /* 
-     * this function replaces the current balance with p_importe
+    /**
+     * Reemplaza el saldo actual del cliente con un nuevo valor.
      * 
-     * @param p_importe the new balance
-     * @return the updated balance
+     * @param p_importe Nuevo saldo a establecer
+     * @return El saldo actualizado
      */
     public double nuevoSaldo(double p_importe)
     {
@@ -101,11 +126,11 @@ public class Cliente
         return getSaldo();
     }
 
-    /* 
-     * this function adds p_importe to the current balance
+    /**
+     * Agrega un importe al saldo actual del cliente.
      * 
-     * @param p_importe the amount to add
-     * @return the updated balance
+     * @param p_importe Importe a agregar al saldo actual
+     * @return El saldo actualizado después de la suma
      */
     public double agregaSaldo(double p_importe)
     {
@@ -113,16 +138,34 @@ public class Cliente
         return getSaldo();
     }
 
+    /**
+     * Concatena el apellido y nombre del cliente separados por un espacio.
+     * 
+     * @return Cadena con formato "Apellido Nombre"
+     */
     public String apeYnom()
     {
         return getApellido() + " " + getNombre();
     }
 
+    /**
+     * Concatena el nombre y apellido del cliente separados por un espacio.
+     * 
+     * @return Cadena con formato "Nombre Apellido"
+     */
     public String nomYape()
     {
         return getNombre() + " " + getApellido();
     }
 
+    /**
+     * Muestra por consola toda la información del cliente.
+     * Incluye nombre completo, DNI y saldo formateado con dos decimales.
+     * Formato de salida:
+     * - Cliente -
+     * Nombre y Apellido: [Apellido Nombre] ([DNI])
+     * Saldo: $[saldo con 2 decimales]
+     */
     public void mostrar()
     {
         System.out.println("- Cliente -");
