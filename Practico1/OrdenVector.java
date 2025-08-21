@@ -9,7 +9,7 @@ public class OrdenVector {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); // creamos el objeto sc de la clase Scanner para el ingreso por teclado
         double[] elementos = new double[4];// creamos el array de tipo double con 4 elementos
-        double menor = 0;
+        double menor = Double.MAX_VALUE;
         System.out.println("ingrese el array de elementos");
 
         for (int i = 0; i < 4; i++) {
@@ -17,6 +17,7 @@ public class OrdenVector {
             elementos[i] = sc.nextDouble();
             if (elementos[i] < menor) { // condicion para determinar el menor elemento
                 menor = elementos[i];
+
             }
 
         }
